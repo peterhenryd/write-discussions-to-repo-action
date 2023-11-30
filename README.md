@@ -32,13 +32,14 @@ jobs:
   discussions:
     runs-on: ubuntu-latest
     name: Writes discussions to file
+    permissions:
+      contents: write
     steps:
       - name: Write discussions step
         id: write_discussions
-        uses: peterhenryd/write-discussions-to-repo-action
+        uses: peterhenryd/write-discussions-to-repo-action@1.0.0
         with:
-          token: "my_token"
+          token: ${{ secrets.GITHUB_TOKEN }}
           repo: "peterhenryd/peterhenryd-me"
-          query-fields: "title id url"
-          output-path: "data/discussions/urls.json"
+          output-path: "data/discussions.json"
 ```
