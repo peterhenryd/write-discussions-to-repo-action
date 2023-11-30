@@ -4,7 +4,7 @@
   "description": "This GitHub action writes all the discussions of a repository to a JSON file in the repository.",
   "main": "dist/index.js",
   "scripts": {
-    "build": "npx tsc --outDir ./ts_out && ncc build ./ts_out/index.js -o ./dist",
+    "build": "npx tsc --outDir ./ts_out && ncc build --minify ./ts_out/index.js -o ./dist",
     "test": "node tests/index.js"
   },
   "keywords": [],
