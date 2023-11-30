@@ -1,7 +1,6 @@
-import {Repo} from "./types";
-import core from "@actions/core";
+import {Core, Repo} from "./types";
 
-export function parseRepo(slug: string): Repo | null {
+export function parseRepo(core: Core, slug: string): Repo | null {
     if (slug == "") {
         return null;
     }
