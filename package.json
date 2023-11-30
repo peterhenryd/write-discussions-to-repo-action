@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "This GitHub action writes all the discussions of a repository to a JSON file in the repository.",
   "main": "dist/index.js",
-  "type": "commonjs",
+  "type": "module",
   "scripts": {
     "build": "npx tsc --outDir ./dist",
     "test": "node tests/index.js"
