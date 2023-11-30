@@ -44,7 +44,6 @@ export interface Octokit {
 
 export interface Core {
     getInput(id: string): string
-    setFailed(message: string): void
 }
 
 export interface Graphql {
