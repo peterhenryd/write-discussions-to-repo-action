@@ -38,8 +38,7 @@ jobs:
         uses: peterhenryd/write-discussions-to-repo-action
         with:
           token: "my_token"
-          repo-owner: "peterhenryd"
-          repo-name: "peterhenryd-me"
+          repo: "peterhenryd/peterhenryd-me"
           query-fields: "title id url"
           output-path: "data/discussions/urls.json"
 ```
