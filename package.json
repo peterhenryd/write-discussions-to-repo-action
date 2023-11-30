@@ -7,9 +7,9 @@
     "build": "npx tsc --outDir ./ts_out && ncc build --minify ./ts_out/index.js -o ./dist",
     "test": "node tests/index.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": ["github", "github-actions"],
+  "author": "peterhenryd",
+  "license": "MIT",
   "devDependencies": {
     "octokit": "^3.1.2",
     "typescript": "^5.3.2"
