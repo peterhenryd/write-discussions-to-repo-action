@@ -1,0 +1,34 @@
+name: "Write GitHub Discussions to Repository"
+description: "This GitHub action writes all the discussions of a repository to a JSON file in the repository."
+inputs:
+  token:
+    description: "API token"
+    required: true
+  repo:
+    description: "Repository to read from (and write to if dest-repo is unspecified)"
+    required: true
+  dest-repo:
+    description: "Repository to write to"
+    required: false
+    default: ""
+  category-id:
+    description: "Discussion category ID"
+    required: false
+    default: ""
+  query-fields:
+    description: "Fields to fetch for each discussion node"
+    required: false
+    default: "title bodyHTML createdAt lastEditedAt author { ... on User { name } }"
+  output-path:
+    description: "Output file name"
+    required: false
+    default: "discussions.json"
+outputs:
+  json:
+    description: "Fetched discussions JSON"
+runs:
+  using: 'node20'
+  main: 'dist/index.js'
+branding:
+  icon: "file-text"
+  color: purple
